@@ -5,10 +5,11 @@ button.title = '';
 button.dataset.container = 'body';
 button.className = 'js-ci-action btn btn-blank btn-transparent ci-action-icon-container ci-action-icon-wrapper play js-icon-play';
 button.dataset.originalTitle = 'Play';
+button.style.fontSize = '12px'
 
 // 创建 SVG 元素
 const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-svg.classList.add('s16', 'ic-play');
+svg.classList.add('s12', 'ic-play');
 const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
 use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '/assets/icons-228b3b53d9a397a1ac64e40bd07152a8a225245f6e754e9ce7450c1dee53e659.svg#play');
 svg.appendChild(use);
@@ -16,17 +17,15 @@ button.appendChild(svg);
 
 // 创建 div 元素
 const div = document.createElement('div');
-div.style.width = '25px';
-div.style.height = '25px';
+div.style.width = '22px';
+div.style.height = '22px';
 div.style.display = 'inline-block';
 div.style.borderRadius = '50%';
-div.style.border = '2px solid #000'; // 可根据需要调整边框样式
+div.style.border = '1px solid #000'; // 可根据需要调整边框样式
 div.style.display = 'inline-flex';
 div.style.justifyContent = 'center';
 div.style.alignItems = 'center';
 div.style.paddingLeft = '3px';
-div.style.position = 'relative';
-div.style.top = '2px';
 
 // 将按钮放入 div 中
 div.appendChild(button);
