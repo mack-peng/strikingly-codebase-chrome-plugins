@@ -39,11 +39,15 @@ if (targetElement) {
 
 // 给按钮添加点击事件
 button.addEventListener('click', function () {
-    // 找到 .js-builds-dropdown-list 内部的所有按钮
-    const dropdownButtons = document.querySelectorAll('.js-builds-dropdown-list button.play');
-    dropdownButtons.forEach(function (dropdownButton) {
-        // 执行点击操作
-        dropdownButton.click();
-    });
+    const stageDropdown = document.getElementById("stageDropdown")
+    stageDropdown?.click()
+    setTimeout(() => {
+      // 找到 .js-builds-dropdown-list 内部的所有按钮
+      const dropdownButtons = document.querySelectorAll('.js-builds-dropdown-list button.play');
+      dropdownButtons.forEach(function (dropdownButton) {
+          // 执行点击操作
+          dropdownButton.click();
+      });
+    }, 2000)
 });
     
